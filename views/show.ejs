@@ -1,0 +1,35 @@
+<% include partials/header %>
+<style>
+    .apple{
+        margin-top: 7em;
+    }
+    #ex{
+        font-family: 'Lobster', cursive;
+    }
+    
+    
+</style>
+<div class="apple">
+<div class="ui main text container segment">
+    <div id = "ex"class="ui huge header"><%= blog.title%> </div>
+    <div class="ui top attached ">
+        <div class="item">
+            <img class="ui centered rounded image" src="<%= blog.image %>">
+            <div class="content">
+                <span><%= blog.created.toDateString() %></span>
+            </div>
+            <div class="description">
+                <p> <%-blog.body%> </p>
+            </div>
+            <a class="ui inverted pink button" href="/blogs/<%= blog._id%>/edit">Edit</a>
+            <form id="butt" action="/blogs/<%= blog._id%>?_method=DELETE" method="POST">
+                <button class="ui inverted violet button" >Delete</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+    </div>
+            
+
+<% include partials/footer %>

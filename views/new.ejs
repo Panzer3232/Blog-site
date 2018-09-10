@@ -1,0 +1,48 @@
+<% include partials/header %>
+<style>
+    .apple{
+        margin-top: 7em;
+        
+
+    }
+   
+    #font{
+      font-family: 'Dancing Script', cursive;
+    }
+    body{
+      background: url(https://images.pexels.com/photos/1149137/pexels-photo-1149137.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260);
+	background-repeat: no-repeat;
+	background-size: cover;
+    }
+    #blow{
+      font-family: 'Concert One', cursive;
+    }
+    #low{
+      font-family: 'Cabin Sketch', cursive;
+    }
+    
+    
+</style>
+<div class="apple">
+ <div  id="blow"class="ui main text container segment">
+    <div id="font" class="ui huge header">New Blog</div>
+    <form class="ui form" action="/blogs" method="POST">
+            <div class="field">
+              <label>Title</label>
+              <input type="text" name="blog[title]" placeholder="Title">
+            </div>
+            <div class="field">
+              <label>Image</label>
+              <input type="text" name="blog[image]" placeholder="Image">
+            </div>
+            <div class="field">
+                    <label>Text</label>
+                    <textarea name="blog[body]"></textarea>
+                  </div>
+                  <input  id= "low"class="ui inverted blue button" type="submit">
+                  </form>
+             </div>
+            </div>
+            
+
+<% include partials/footer %>
